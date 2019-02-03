@@ -1,4 +1,16 @@
-## Two way ANOVA Type II/Type III 
+## Two way ANOVA Type I/II/Type III 
+
+## Type I  => #balanced
+#Two-way ANOVA with 2 main effects
+res.aov2 <- aov(prejudice ~ suffering + liedetection)
+summary(res.aov2)
+
+#Two-way ANOVA with interaction effect
+#These two calls are equivalent
+res.aov3 <- aov(prejudice ~ suffering * liedetection)
+res.aov3 <- aov(prejudice ~ suffering + liedetection + suffering:liedetection)
+summary(res.aov3)
+
 ## Type II  => to test the main effects without interaction significant
 #4. Anova
 #4.1 Balanced?   看每组被试数
