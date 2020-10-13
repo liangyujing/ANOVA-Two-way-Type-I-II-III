@@ -1,3 +1,4 @@
+```
 ## Two way ANOVA Type I/II/Type III 
 
 ## Type I  => #balanced
@@ -33,3 +34,4 @@ typeIII <- Anova(model_III, type=3)
 # 多重比较
 ##within sex contrasts (look at income, controling for sex)
 lsm = lsmeans(model_III, pairwise ~ sex|Income,adjust="tukey")
+```
